@@ -81,44 +81,88 @@
 //     }
 //   }
 // }
-String greet(String name) {
-  return 'Привет, $name!';
-}
+// String greet(String name) {
+//   return 'Привет, $name!';
+// }
 
-int square(int x) => x * x;
-double half(double x) => x / 2;
+// int square(int x) => x * x;
+// double half(double x) => x / 2;
 
-void describePet({required String name, String species = 'кот', int age = 0}) {
-  print('$name – $species, возраст $age');
-}
+// void describePet({required String name, String species = 'кот', int age = 0}) {
+//   print('$name – $species, возраст $age');
+// }
 
-String repeat(String text, [int times = 2]) {
-  String result = '';
-  for (int i = 0; i < times; i++) {
-    result += text;
-  }
-  return result;
-}
+// String repeat(String text, [int times = 2]) {
+//   String result = '';
+//   for (int i = 0; i < times; i++) {
+//     result += text;
+//   }
+//   return result;
+// }
 
-void main() {
-  print(greet('Анфиса'));
-  print(greet('Мария'));
+// void main() {
+//   print(greet('Анфиса'));
+//   print(greet('Мария'));
 
-  describePet(name: 'Барсик', age: 3);
-  describePet(name: 'Шарик', species: 'пёс');
+//   describePet(name: 'Барсик', age: 3);
+//   describePet(name: 'Шарик', species: 'пёс');
 
-  print(repeat('xa'));
-  print(repeat('xa', 3));
+//   print(repeat('xa'));
+//   print(repeat('xa', 3));
 
-  List<int> numbers =[3, 1, 4, 1, 5, 9];
-  numbers.sort((a, b) => b - a);
-  print(numbers);
+//   List<int> numbers =[3, 1, 4, 1, 5, 9];
+//   numbers.sort((a, b) => b - a);
+//   print(numbers);
 
-  List<String> names = ['Анфиса', 'Мария', 'Иван'];
+//   List<String> names = ['Анфиса', 'Мария', 'Иван'];
   
-  List<String> upper = names.map((name) => name.toUpperCase()).toList();
-  print(upper);
+//   List<String> upper = names.map((name) => name.toUpperCase()).toList();
+//   print(upper);
 
-  List<String> longNames = names.where((name) => name.length > 4).toList();
-  print(longNames);
+//   List<String> longNames = names.where((name) => name.length > 4).toList();
+//   print(longNames);
+// }
+void main() {
+  int score2 = 85;
+  String grade;
+  if (score2 >= 90) {
+    grade = 'A';
+  } else if (score2 >= 75) {
+    grade = 'B';
+  } else {
+    grade = 'C';
+  }
+  print(grade);
+
+  int score = 18;
+  String result = score >= 60 ? 'Сдал' : 'Не сдал';
+  print(result);
+
+  for (int i = 0; i < 5; i++) {
+    print(i);
+  }
+
+  List<String> fruits3 = ['яблоко', 'банан', 'груша'];
+  for (var fruit in fruits3) {
+    print(fruit);
+  }
+
+  int n = 0;
+  while (n < 3) {
+    print(n);
+    n++;
+  }
+
+  String day = 'Пн';
+  switch (day) {
+    case 'Сб':
+    case 'Вс':
+      print('Выходной');
+      break;
+    case 'Пн':
+      print('Начало недели');
+      break;
+    default:
+      print('Рабочий день');
+  }
 }
